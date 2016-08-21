@@ -25,10 +25,18 @@
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD7Un45WC91rrgE8H31Uka1mVjWqJfBfGo"></script>
     <script>
         function initialize() {
+            
             var mapProp = {
-                center:new google.maps.LatLng(51.508742,-0.120850), zoom:5, mapTypeId:google.maps.MapTypeId.ROADMAP
+                center:new google.maps.LatLng(37.0902,-95.7129), zoom:3, mapTypeId:google.maps.MapTypeId.ROADMAP
             };
-            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            var map=new google.maps.Map(document.getElementById("map"),mapProp);
+            
+            
+            var losAngeles = {lat: 34.0522, lng: -118.2437};
+            var losAngelesmarker = new google.maps.Marker({position: losAngeles, map: map});
+            
+            var fremont = {lat: 37.5483, lng: -121.9886};
+            var fremontmarker = new google.maps.Marker({position: fremont, map: map});
         }
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
@@ -79,7 +87,7 @@
         <div class="jumbotron">
         <h1 style="text-align:center;">Ian Gunady</h1>
             <center><img class="circular" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAMxAAAAJDczMzc1OGVlLTlmYzMtNDE2Yi04MzdlLTg0YzIzYzcyYTFlNA.jpg" alt="Photo of Me"/></center>
-            <br><p style="text-align:center;">Hello! I am a rising Sophomore at Stanford University studying Mechanical Engineering. I love fast cars and making cool things.</p><br>
+            <br><p style="text-align:center;">Hello! I am a rising Sophomore at Stanford University studying Mechanical Engineering. I love making cool things.</p><br>
             
             <center>
                 <a href="https://www.linkedin.com/in/ian-gunady-53a1b2103">
@@ -96,11 +104,14 @@
         </div>
     </div>
     
+    
+    <!-- Google Map -->
     <div  class="container">
         <div class="jumbotron">
             <div class="map-responsive">
-                <div id="googleMap" style="width:1000px;height:600px;"></div>
+                <div id="map" style="width:1000px;height:600px;"></div>
             </div>
+            <h4 style="text-align:center" class="text-muted"><q>Not all those who wander are lost</q> -Tolkien</h4>
         </div>
     </div>  
   
