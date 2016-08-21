@@ -21,6 +21,18 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
+    <!-- google map -->
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapProp = {
+                center:new google.maps.LatLng(51.508742,-0.120850), zoom:5, mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    
     <style>
           body {
               background-image: url('https://static.pexels.com/photos/4927/sea-beach-vacation-sand.jpg');
@@ -50,6 +62,12 @@
           font-weight: normal;
           font-style: normal;
         }
+        .map-responsive{
+            overflow:hidden;
+            padding-bottom:56.5%;
+            position:relative;
+            height:0;
+        }
     </style>
     
     
@@ -75,14 +93,16 @@
                 </a>
             </center>
             
-            
-        
         </div>
     </div>
     
-    
-    
-    
+    <div  class="container">
+        <div class="jumbotron">
+            <div class="map-responsive">
+                <div id="googleMap" style="width:1000px;height:600px;"></div>
+            </div>
+        </div>
+    </div>  
   
 </body>
 
