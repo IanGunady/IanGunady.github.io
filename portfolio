@@ -1,1 +1,211 @@
 
+<!DOCTYPE html>
+<html lang="en-US">
+  
+<head> <!-- =============== THIS IS THE HEAD ==================== -->
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ian Gunady</title>
+    <meta name="description" content="Ian Gunady">
+    <meta name="author" content="Ian Gunady">
+    
+    <link rel="icon" href="../../favicon.ico">
+    
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- google map -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD7Un45WC91rrgE8H31Uka1mVjWqJfBfGo"></script>
+    <script>
+        function initialize() {
+            
+            var mapProp = {
+                center:new google.maps.LatLng(37.0902,-95.7129), zoom:3, mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            var map=new google.maps.Map(document.getElementById("map"),mapProp);
+            
+            
+            var losAngeles = {lat: 34.0522, lng: -118.2437};
+            var losAngelesmarker = new google.maps.Marker({position: losAngeles, map: map});
+            
+            var sanDiego = {lat: 32.7157, lng: -117.1611};
+            var sanDiegomarker = new google.maps.Marker({position: sanDiego, map: map});
+            
+            var fremont = {lat: 37.5483, lng: -121.9886};
+            var fremontmarker = new google.maps.Marker({position: fremont, map: map});
+            
+            var jakarta = {lat: -6.1745, lng: 106.8227};
+            var jakartamarker = new google.maps.Marker({position: jakarta, map: map});
+            
+            var bandung = {lat: -6.9175, lng: 107.6191};
+            var bandungmarker = new google.maps.Marker({position: bandung, map: map});
+            
+            var singapore = {lat: 1.3521, lng: 103.8198};
+            var singapormarker = new google.maps.Marker({position: singapore, map: map});
+            
+            var amsterdam ={lat: 52.3702, lng: 4.8952};
+            var amsterdammarker = new google.maps.Marker({position: amsterdam, map: map});
+            
+            var paris = {lat: 48.8566, lng: 2.3522};
+            var parismarker = new google.maps.Marker({position: paris, map: map});
+            
+            var tokyo = {lat: 35.6895, lng: 139.6917};
+            var tokyomarker = new google.maps.Marker({position: tokyo, map: map});
+            
+            var perth = {lat: -31.9505, lng: 115.8605};
+            var perthmarker = new google.maps.Marker({position: perth, map: map});
+            
+            var malaysia = {lat: 4.2105, lng: 101.9758};
+            var malaysiamarker = new google.maps.Marker({position: malaysia, map: map});
+            
+            var fujian = {lat: 26.1008, lng: 119.2951};
+            var fujianmarker = new google.maps.Marker({position: fujian, map: map});
+            
+            var xiamen = {lat: 24.4798, lng: 118.0894};
+            var xiamenmarker = new google.maps.Marker({position: xiamen, map: map});
+            
+            var lasvegas = {lat: 36.1699, lng: -115.1398};
+            var lasvegasmarker = new google.maps.Marker({position: lasvegas, map: map});
+            
+            var hongkong = {lat: 22.3964, lng: 114.1095};
+            var hongkongmarker = new google.maps.Marker({position: hongkong, map: map});
+            
+            var washingtondc = {lat: 38.9072, lng: -77.0369};
+            var washingtondcmarker = new google.maps.Marker({position: washingtondc, map: map});
+            
+            var yosemite = {lat: 37.8651, lng: -119.5383};
+            var yosemitemarker = new google.maps.Marker({position: yosemite, map: map});
+            
+            var bali = {lat: -8.3405, lng: 115.0920};
+            var balimarker = new google.maps.Marker({position: bali, map: map});
+            
+            var seattle = {lat: 47.6062, lng: -122.3321};
+            var seattlemarker = new google.maps.Marker({position: seattle, map: map});
+            
+        }
+        google.maps.event.addDomListener(window, "resize", function() {
+			var center = map.getCenter();
+			google.maps.event.trigger(map, "resize");
+			map.setCenter(center);
+		});
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    
+    <style>
+        body {
+              background-color: #1abc9c;
+        }
+        .jumbotron {
+            opacity: .97;
+            background-color: #32ABFF; /*Blue*/
+        }
+        .container{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .circular {
+            border-radius: 50%;
+        }
+        .bg-1 {
+            background-color: #1abc9c; /*Green*/
+            color: #ffffff
+        }
+        .bg-2 {
+            background-color: #32ABFF; /*Blue*/
+            color: #ffffff
+          }
+        @font-face {
+            font-family: "socicon";
+            src:url("fonts/socicon.eot");
+            src:url("fonts/socicon.eot?#iefix") format("embedded-opentype"),
+            url("fonts/socicon.woff") format("woff"),
+            url("fonts/socicon.ttf") format("truetype"),
+            url("fonts/socicon.svg#socicon") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+        .map-responsive {
+            height: 0;
+            overflow:hidden;
+            padding-top:39px;
+            padding-bottom:56.5%;
+            position:relative;
+            height:0;
+        }
+        #map_container{
+            position: relative;
+        }
+        #map{
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 22.25%;
+            padding-top: 30px;
+            position: relative;
+        }
+    </style>
+    
+    
+</head>
+
+
+<body> <!-- =============== THIS IS THE BODY ==================== -->
+    <div class="container-fluid bg-1">
+        <br>
+        <div class="jumbotron">
+        <h1 style="text-align:center;">Ian Gunady</h1>
+            <center><img class="circular" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAMxAAAAJDczMzc1OGVlLTlmYzMtNDE2Yi04MzdlLTg0YzIzYzcyYTFlNA.jpg" alt="Photo of Me"/></center>
+            <br><p style="text-align:center;">Hello! I am a rising Sophomore at Stanford University studying Mechanical Engineering. I love making cool things.</p><br>
+            
+            <center>
+                <a href="https://www.linkedin.com/in/ian-gunady-53a1b2103">
+                    <img BORDER="0" src="http://image.flaticon.com/icons/svg/174/174857.svg" style="width:60px;height:60px" alt="linkedIn">
+                </a>
+                <a href="https://twitter.com/simplrtimes">
+                    <img BORDER="0" src="http://image.flaticon.com/icons/svg/60/60580.svg" style="width:60px;height:60px" alt="twitter">
+                </a>
+                <a href="mailto:igunady@stanford.edu">
+                    <img BORDER="0" src="http://image.flaticon.com/icons/svg/34/34400.svg" style="width:60px;height:60px" alt="email">
+                </a>
+            </center>
+        <br>
+        </div>    
+    </div>
+    
+    
+    <!-- Google Map
+    <div class="container bg-1">
+        <div class="jumbotron">
+            <center><div  id="map_container">
+                    <h4 class="text-muted"><q class="text-muted">Not all those who wander are lost</q> -Tolkien</h4>
+                    <div class="map-responsive">
+                        <div id="map" style="width:1030px;height:400px;"></div>
+                    </div>
+            </div></center>
+        </div>
+    </div>
+    
+    -->
+    
+  
+</body>
+
+</html>
+
+
+<!-- in style: -->
+<!-- body {
+              background-image: url('https://static.pexels.com/photos/4927/sea-beach-vacation-sand.jpg');
+              background-size: auto 350%;
+              background-repeat:no-repeat;
+              display: compact;
+              background-position: center center;
+              background-color: powderblue;
+          }-->
