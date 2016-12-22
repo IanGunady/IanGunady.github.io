@@ -24,6 +24,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
+    <!-- Masonry --> 
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="/path/to/masonry.pkgd.min.js"></script>
+    
     <style>
         body {
               background-color: #F6E3CE;
@@ -88,12 +92,50 @@
             padding-bottom: 22.25%;
             padding-top: 30px;
             position: relative;
-        }
-    </style>
-    
-    
-</head>
+        }   
+        
+        
+        * { box-sizing: border-box; }
 
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #EEE;
+  max-width: 1200px;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 160px;
+  height: 120px;
+  float: left;
+  background: #D26;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item--width2 { width: 320px; }
+.grid-item--width3 { width: 480px; }
+.grid-item--width4 { width: 640px; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+        
+        
+    </style>
+</head>
 
 <body> <!-- =============== THIS IS THE BODY ==================== -->
     <nav class="navbar navbar-default navbar-static-top">
@@ -121,11 +163,41 @@
     </nav>
     
     <div class="container-fluid bg-main">
-        <br>
-        <div class="jumbotron bg-2">
-        <h1 style="text-align:center;">Portfolio</h1>
-            
-        </div>    
+        
+        <!-- Page Title: "Portfolio" -->
+        <br><h2 style="text-align:center;">Portfolio</h1><br>
+        
+        <!-- Picture grid -->
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--width2 grid-item--height2"></div>
+            <div class="grid-item grid-item--height3"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width3"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width2 grid-item--height3"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--width2 grid-item--height2"></div>
+            <div class="grid-item grid-item--width2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height3"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+        </div>
+
+
+        
+        <!-- <div class="jumbotron bg-2"></div> -->
     </div>
     
   
