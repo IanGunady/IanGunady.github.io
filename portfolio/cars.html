@@ -1,1 +1,239 @@
 
+<!DOCTYPE html>
+<html lang="en-US">
+  
+<head> <!-- =============== THIS IS THE HEAD ==================== -->
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <meta name="description" content="Ian Gunady">
+    <meta name="author" content="Ian Gunady">
+    
+    <link rel="icon" href="../../favicon.ico">
+    
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <!-- Masonry --> 
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script src="/path/to/masonry.pkgd.min.js"></script>
+    
+    <style>
+        body {
+              background-color: #F6E3CE;
+        }
+        .jumbotron {
+            opacity: .97;
+            background-color: #F6E3CE;
+        }
+        .container{
+            width: 100%;
+            margin: 0 auto;
+        }
+        .circular {
+            border-radius: 50%;
+        }
+        .bg-main {
+            background-color: #F6E3CE; 
+            color: black
+        }
+        .bg-2 {
+            background-color: #C2D6EB; 
+            color: black
+        }
+        .bg-3 {
+            background-color: #1abc9c; 
+            color: black
+        }
+        /* Dark Purple #431C54 */
+        /* Dark Blue #182549 */
+        /* Light Blue #71A5D0 */
+        /* Blue #32ABFF */
+        /* Tan #F6E3CE */
+        /* lighter tan #E9CCBE */
+        /* Green #1abc9c */
+        /* maroon #67222C */
+        /* light blue #C2D6EB */
+        
+        @font-face {
+            font-family: "socicon";
+            src:url("fonts/socicon.eot");
+            src:url("fonts/socicon.eot?#iefix") format("embedded-opentype"),
+            url("fonts/socicon.woff") format("woff"),
+            url("fonts/socicon.ttf") format("truetype"),
+            url("fonts/socicon.svg#socicon") format("svg");
+            font-weight: normal;
+            font-style: normal;
+        }
+        .map-responsive {
+            height: 0;
+            overflow:hidden;
+            padding-top:39px;
+            padding-bottom:56.5%;
+            position:relative;
+            height:0;
+        }
+        #map_container{
+            position: relative;
+        }
+        #map{
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 22.25%;
+            padding-top: 30px;
+            position: relative;
+        }   
+        
+        
+        * { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+  background: #F6E3CE;
+  max-width: 1200px;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: 160px;
+  height: 120px;
+  float: left;
+  background: #F6E3CE;
+  border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
+
+.grid-item--width2 { width: 320px; }
+.grid-item--width3 { width: 480px; }
+.grid-item--width4 { width: 640px; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+        
+        
+    </style>
+</head>
+
+<body> <!-- =============== THIS IS THE BODY ==================== -->
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container-fluid bg-main">
+            
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <!-- <a class="navbar-brand" href="#">I.G.</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="http://iangunady.me">Home</a></li>
+                    <li class="dropdown active"><span class="sr-only">(current)</span>
+                        <a href="http://iangunady.me/portfolio" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="active"><a href="http://iangunady.me/portfolio/cars">Mechanics</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Woodwork</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="http://iangunady.me/about">About</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    
+    <div class="container-fluid bg-main">
+        
+        <!-- Page Title: "Portfolio" -->
+        <div class="container-fluid bg-main">
+        <br>
+        <div class="jumbotron bg-2">
+        <h2 style="text-align:center;">RC Cars</h2>
+            <br><p style="text-align:center;">Pictured below are a few of my RC Cars. I have worked with gas and electric powered cars. They are marvels of engineering and are what initially drew me to engineering. I love the trial and error that comes with tuning tuning engines and optimizing suspension geometries.</p><br>
+            
+            <!-- <center>
+                <a href="https://www.linkedin.com/in/ian-gunady-53a1b2103">
+                    <img BORDER="0" src="http://image.flaticon.com/icons/svg/174/174857.svg" style="width:60px;height:60px" alt="linkedIn">
+                </a>
+                <a href="https://twitter.com/simplrtimes">
+                    <img BORDER="0" src="http://image.flaticon.com/icons/svg/60/60580.svg" style="width:60px;height:60px" alt="twitter">
+                </a>
+                <a href="mailto:igunady@stanford.edu">
+                    <img BORDER="0" src="http://image.flaticon.com/icons/svg/34/34400.svg" style="width:60px;height:60px" alt="email">
+                </a>
+            </center> -->
+        <br>
+        </div>    
+    </div>
+        
+        <!-- Picture grid -->
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            <!-- <div class="grid-item"></div> -->
+            <div class="grid-item grid-item--height4 grid-item--width4"><img src="http://iangunady.me/IMG_20161222_010935.jpg" alt="Serpent966" style="width: 640px; height: 360px;"/></div>
+            
+            <div class="grid-item grid-item--height4 grid-item--width4"><img src="http://iangunady.me/IMG_20161222_011012.jpg" alt="Serpent966" style="width: 640px; height: 360px;"/></div>
+            
+            
+            <!--
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width3"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item grid-item--width2 grid-item--height3"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--width2 grid-item--height2"></div>
+            <div class="grid-item grid-item--width2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height3"></div>
+            <div class="grid-item grid-item--height2"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item grid-item--height2"></div>
+-->
+        </div>
+
+
+        
+        <!-- <div class="jumbotron bg-2"></div> -->
+    </div>
+    
+  
+</body>
+
+</html>
