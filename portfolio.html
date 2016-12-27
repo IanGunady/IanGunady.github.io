@@ -156,7 +156,14 @@ body { font-family: sans-serif; }
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="http://iangunady.me">Home</a></li>
-                    <li class="active"><a href="http://iangunady.me/portfolio">Portfolio<span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown active"><span class="sr-only">(current)</span>
+                        <a href="http://iangunady.me/portfolio" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="active"><a href="http://iangunady.me/portfolio/cars">Mechanics</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Woodwork</a></li>
+                      </ul>
+                    </li>
                     <li><a href="http://iangunady.me/about">About</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -166,7 +173,26 @@ body { font-family: sans-serif; }
     <div class="container-fluid bg-main">
         
         <!-- Page Title: "Portfolio" -->
-        <br><h2 style="text-align:center;">Portfolio</h1><br>
+        <div class="container-fluid bg-main">
+        <br>
+        <div class="jumbotron bg-2">
+        <h2 style="text-align:center;">RC Cars</h2>
+            <br><p style="text-align:center;">Pictured below are a few of my RC Cars. I have worked with gas and electric powered cars. They are marvels of engineering and are what initially drew me to engineering. I love the trial and error that comes with tuning engines and optimizing suspension geometries.</p><br>
+            
+            <!-- <center>
+                <a href="https://www.linkedin.com/in/ian-gunady-53a1b2103">
+                    <img BORDER="0" src="http://image.flaticon.com/icons/svg/174/174857.svg" style="width:60px;height:60px" alt="linkedIn">
+                </a>
+                <a href="https://twitter.com/simplrtimes">
+                    <img BORDER="0" src="http://image.flaticon.com/icons/svg/60/60580.svg" style="width:60px;height:60px" alt="twitter">
+                </a>
+                <a href="mailto:igunady@stanford.edu">
+                    <img BORDER="0" src="http://image.flaticon.com/icons/svg/34/34400.svg" style="width:60px;height:60px" alt="email">
+                </a>
+            </center> -->
+        <br>
+        </div>    
+    </div>
         
         <!-- Picture grid -->
         <div class="grid">
