@@ -9,115 +9,47 @@
     <meta name="description" content="Ian Gunady">
     <meta name="author" content="Ian Gunady">
     
-    
-    
-    
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    -->
     
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
-    <!-- google map -->
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD7Un45WC91rrgE8H31Uka1mVjWqJfBfGo"></script>
-        
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
-    
-    
-    <script>
-        function initialize() {
-            
-            var mapProp = {
-                center:new google.maps.LatLng(37.0902,-95.7129), zoom:3, mapTypeId:google.maps.MapTypeId.ROADMAP
-            };
-            var map=new google.maps.Map(document.getElementById("map"),mapProp);
-            
-            
-            var losAngeles = {lat: 34.0522, lng: -118.2437};
-            var losAngelesmarker = new google.maps.Marker({position: losAngeles, map: map});
-            
-            var sanDiego = {lat: 32.7157, lng: -117.1611};
-            var sanDiegomarker = new google.maps.Marker({position: sanDiego, map: map});
-            
-            var fremont = {lat: 37.5483, lng: -121.9886};
-            var fremontmarker = new google.maps.Marker({position: fremont, map: map});
-            
-            var jakarta = {lat: -6.1745, lng: 106.8227};
-            var jakartamarker = new google.maps.Marker({position: jakarta, map: map});
-            
-            var bandung = {lat: -6.9175, lng: 107.6191};
-            var bandungmarker = new google.maps.Marker({position: bandung, map: map});
-            
-            var singapore = {lat: 1.3521, lng: 103.8198};
-            var singapormarker = new google.maps.Marker({position: singapore, map: map});
-            
-            var amsterdam ={lat: 52.3702, lng: 4.8952};
-            var amsterdammarker = new google.maps.Marker({position: amsterdam, map: map});
-            
-            var paris = {lat: 48.8566, lng: 2.3522};
-            var parismarker = new google.maps.Marker({position: paris, map: map});
-            
-            var tokyo = {lat: 35.6895, lng: 139.6917};
-            var tokyomarker = new google.maps.Marker({position: tokyo, map: map});
-            
-            var perth = {lat: -31.9505, lng: 115.8605};
-            var perthmarker = new google.maps.Marker({position: perth, map: map});
-            
-            var malaysia = {lat: 4.2105, lng: 101.9758};
-            var malaysiamarker = new google.maps.Marker({position: malaysia, map: map});
-            
-            var fujian = {lat: 26.1008, lng: 119.2951};
-            var fujianmarker = new google.maps.Marker({position: fujian, map: map});
-            
-            var xiamen = {lat: 24.4798, lng: 118.0894};
-            var xiamenmarker = new google.maps.Marker({position: xiamen, map: map});
-            
-            var lasvegas = {lat: 36.1699, lng: -115.1398};
-            var lasvegasmarker = new google.maps.Marker({position: lasvegas, map: map});
-            
-            var hongkong = {lat: 22.3964, lng: 114.1095};
-            var hongkongmarker = new google.maps.Marker({position: hongkong, map: map});
-            
-            var washingtondc = {lat: 38.9072, lng: -77.0369};
-            var washingtondcmarker = new google.maps.Marker({position: washingtondc, map: map});
-            
-            var yosemite = {lat: 37.8651, lng: -119.5383};
-            var yosemitemarker = new google.maps.Marker({position: yosemite, map: map});
-            
-            var bali = {lat: -8.3405, lng: 115.0920};
-            var balimarker = new google.maps.Marker({position: bali, map: map});
-            
-            var seattle = {lat: 47.6062, lng: -122.3321};
-            var seattlemarker = new google.maps.Marker({position: seattle, map: map});
-            
-        }
-        google.maps.event.addDomListener(window, "resize", function() {
-			var center = map.getCenter();
-			google.maps.event.trigger(map, "resize");
-			map.setCenter(center);
-		});
-        google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+    <link href="https://fonts.googleapis.com/css?family=Assistant:200|Raleway:200|Roboto:100|Source+Sans+Pro:200|Work+Sans:200" rel="stylesheet">
     
     <style>
         body {
             background-color: #DCE2EA;
-            /* background-color: #F6E3CE; */
+            font-family: 'Roboto', sans-serif;
+        }
+        h1 {
+            font-size: 64px;
+        }
+        h2 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 16px;
+        }
+        h2.description {
+            line-height: 1.8;
+        }
+        h2.cv {
+            line-height: 1.5;
         }
         .jumbotron {
             /* opacity: .97; */
-            background-color: #ABD8F2; /*Blue*/
+            background-color: #F2F2F2;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
         .container{
             width: 100%;
             margin: 0 auto;
+            text-align: justify;
         }
         .circular {
             border-radius: 50%;
@@ -127,65 +59,20 @@
             color: black
         }
         .bg-2 {
-            background-color: #ABD8F2; 
+            background-color: #F2F2F2;
             color: black
         }
-        .bg-3 {
-            background-color: #1abc9c; /*Green*/
-            color: black
+        .navbar .navbar-nav {
+            display: inline-block;
+            float: none;
         }
-        
-        /* Dark Purple #431C54 */
-        /* Dark Blue #182549 */
-        /* Light Blue #71A5D0 */
-        /* Blue #32ABFF */
-        /* Tan #F6E3CE */
-        /* lighter Tan */
-        /* Green #1abc9c */
-        /* maroon #67222C */
-        /* light blue #C2D6EB #ABD8F2 */
-        /* gray #CACFD6 #DCE2EA */
-        
-        
-        
-        @font-face {
-            font-family: "socicon";
-            src:url("fonts/socicon.eot");
-            src:url("fonts/socicon.eot?#iefix") format("embedded-opentype"),
-            url("fonts/socicon.woff") format("woff"),
-            url("fonts/socicon.ttf") format("truetype"),
-            url("fonts/socicon.svg#socicon") format("svg");
-            font-weight: normal;
-            font-style: normal;
+        .navbar .navbar-collapse {
+            text-align: center;
         }
-        .map-responsive {
-            height: 0;
-            overflow:hidden;
-            padding-top:39px;
-            padding-bottom:56.5%;
-            position:relative;
-            height:0;
-        }
-        #map_container{
-            position: relative;
-        }
-        #map{
-            height: 0;
-            overflow: hidden;
-            padding-bottom: 22.25%;
-            padding-top: 30px;
-            position: relative;
-        }
-    </style>
-    
-    
+    </style> 
 </head>
 
-
 <body> <!-- =============== THIS IS THE BODY ==================== -->
-    
-    
-    
     
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container-fluid bg-main">
@@ -213,7 +100,17 @@
                             <li><a href="http://iangunady.me/portfolio/woodworking">Woodwork</a></li>
                       </ul>
                     </li>
-                    <li class="active"><a href="http://iangunady.me/about">About<span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="http://iangunady.me/about">Curriculum Vitae<span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="http://iangunady.me" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Personal<span class="caret bg-2"></span></a>
+                        <ul class="dropdown-menu bg-2">
+                            <li class="bg-2"><a href="http://iangunady.me">Music</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="bg-2"><a href="http://iangunady.me">Dogs</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="bg-2"><a href="http://iangunady.me">Movies</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -222,53 +119,26 @@
     <div class="container-fluid bg-main">
         <br>
         <div class="jumbotron bg-2">
-        <h1 style="text-align:center;">About</h1>
+        <h1 style="text-align:center;">Curriculum Vitae</h1>
             
-            <p>Born and raised in California's Bay Area, I am now studying Mechanical Engineering at Stanford University.</p>
+            <h2 align="center"><b>Born and raised in California's Bay Area, I am now studying Mechanical Engineering at Stanford University.</b></h2>
             
-            <h2>Coursework</h2>
-            <p><em>Physics</em> - Mechanics, Electricity & Magnetism, Light & Heat) Intro to Solid Mechanics
-            <br><em>Math</em> - Vector Calculus, Ordinary Differential Equations, Probability and Statistics 
-            <br><em>Computer Science</em> - Programming Methodology & Abstractions
-            <br><em>International Security</em> - Technology and National Security; Nuclear Weapons, Energy, Proliferation, and Terrorism
-            <br><em>Mechanical Engineering</em> - Visual Thinking, Statics, Mechanics of Materials, Dynamics, Intro to EE, Thermodynamics, Fluids Engineering, Fluid Mechanics: Compressible Flow and Turbomachinery
+            
+            <h2 class="cv"><em>Coursework</em>
+            <br><b>Physics</b> - Mechanics, Electricity & Magnetism, Light & Heat) Intro to Solid Mechanics
+            <br><b>Math</b> - Vector Calculus, Ordinary Differential Equations, Probability and Statistics 
+            <br><b>Computer Science</b> - Programming Methodology & Abstractions
+            <br><b>International Security</b> - Technology and National Security; Nuclear Weapons, Energy, Proliferation, and Terrorism
+            <br><b>Mechanical Engineering</b> - Visual Thinking, Statics, Mechanics of Materials, Dynamics, Intro to EE, Thermodynamics, Fluids Engineering, Fluid Mechanics: Compressible Flow and Turbomachinery
             <!-- <br><em>Currently Taking</em> – -->
-            <br><em>Planned Fall 2017</em> – Dynamic Systems, Vibrations and Control; Heat Transfer</p>
-            <br>
-            <h2>Experience</h2>
-            <p><em>VPTL Peer Tutor</em> - <i>Tutor</i> - Appointment-based tutor for engineering classes.
-            <br><em>Product Realization Lab</em> - <i>Member</i> - Machining, circuits, welding, casting, 3D scanning, laser cutting, and rapid prototyping with a variety of materials
-            <br><em>Intersect: The Stanford Journal of Science, Technology, and Society</em> - <i>Editor</i> - Editor of an academic journal run by undergraduate students.
-            <br><em>Hoover Institution National Security Affairs Fellows Program</em> - <i>Mentee</i> - Attend Hoover events on international affairs with senior U.S. and foreign leaders as a mentee.</p>
+            <br><b>Planned Fall 2017</b> – Dynamic Systems, Vibrations and Control; Heat Transfer</h2>
+            <h2 class="cv"><font size="20">Experience</font>
+            <br><b>VPTL Peer Tutor</b> - <i>Tutor</i> - Appointment-based tutor for engineering classes.
+            <br><b>Product Realization Lab</b> - <i>Member</i> - Machining, circuits, welding, casting, 3D scanning, laser cutting, and rapid prototyping with a variety of materials
+            <br><b>Intersect: The Stanford Journal of Science, Technology, and Society</b> - <i>Editor</i> - Editor of an academic journal run by undergraduate students.
+            <br><b>Hoover Institution National Security Affairs Fellows Program</b> - <i>Mentee</i> - Attend Hoover events on international affairs with senior U.S. and foreign leaders as a mentee.</h2>
         </div>    
     </div>
-    
-    <!-- Google Map
-    <div class="container bg-main">
-        <div class="jumbotron">
-            <center><div  id="map_container">
-                    <h4 class="text-muted"><q class="text-muted">Not all those who wander are lost</q> -Tolkien</h4>
-                    <div class="map-responsive">
-                        <div id="map" style="width:1030px;height:400px;"></div>
-                    </div>
-            </div></center>
-        </div>
-    </div>
-    
-    -->
-    
-  
 </body>
 
 </html>
-
-
-<!-- in style: -->
-<!-- body {
-              background-image: url('https://static.pexels.com/photos/4927/sea-beach-vacation-sand.jpg');
-              background-size: auto 350%;
-              background-repeat:no-repeat;
-              display: compact;
-              background-position: center center;
-              background-color: powderblue;
-          }-->
